@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Bus Ticket Booking System</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(0,0,0,0.3);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:20px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:20px;
+margin-bottom:25px;
+}
+
+.btn{
+padding:12px 25px;
+background:#ff9800;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:18px;
+}
+
+.section{
+padding:60px 10%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:30px;
+font-size:35px;
+}
+
+.search-box{
+background:white;
+color:black;
+padding:25px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+}
+
+.search-box input,
+.search-box select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.search-box button{
+width:100%;
+padding:12px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+}
+
+.routes{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.route-card{
+background:white;
+color:black;
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+.bus-list{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.bus-card{
+background:white;
+color:black;
+padding:20px;
+border-radius:15px;
+}
+
+.bus-card h3{
+margin-bottom:10px;
+}
+
+.bus-card button{
+background:green;
+color:white;
+padding:10px;
+width:100%;
+border:none;
+border-radius:8px;
+margin-top:10px;
+}
+
+.seat-container{
+background:white;
+color:black;
+padding:30px;
+border-radius:15px;
+max-width:800px;
+margin:auto;
+}
+
+.seats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+margin-top:20px;
+}
+
+.seat{
+background:#4caf50;
+color:white;
+padding:15px;
+text-align:center;
+border-radius:8px;
+cursor:pointer;
+}
+
+.payment{
+background:white;
+color:black;
+padding:30px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+}
+
+.payment input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.ticket{
+background:white;
+color:black;
+padding:30px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+text-align:center;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">🚌 BusBook</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Search</a></li>
+<li><a href="#">Bookings</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<h1>Online Bus Ticket Booking</h1>
+<p>Book your bus tickets anytime, anywhere.</p>
+<button class="btn">Book Now</button>
+</div>
+</section>
+
+<section class="section">
+<h2>Search Buses</h2>
+
+<div class="search-box">
+<input type="text" placeholder="From City">
+<input type="text" placeholder="To City">
+<input type="date">
+
+<select>
+<option>Select Bus Type</option>
+<option>AC Sleeper</option>
+<option>AC Seater</option>
+<option>Non AC</option>
+</select>
+
+<button>Search Bus</button>
+</div>
+</section>
+
+<section class="section">
+<h2>Popular Routes</h2>
+
+<div class="routes">
+<div class="route-card">Chennai ➜ Bangalore</div>
+<div class="route-card">Chennai ➜ Coimbatore</div>
+<div class="route-card">Chennai ➜ Madurai</div>
+<div class="route-card">Chennai ➜ Hyderabad</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Available Buses</h2>
+
+<div class="bus-list">
+
+<div class="bus-card">
+<h3>Green Travels</h3>
+<p>AC Sleeper</p>
+<p>10:00 PM</p>
+<p>₹950</p>
+<button>Select Bus</button>
+</div>
+
+<div class="bus-card">
+<h3>KPN Travels</h3>
+<p>AC Seater</p>
+<p>09:30 PM</p>
+<p>₹800</p>
+<button>Select Bus</button>
+</div>
+
+<div class="bus-card">
+<h3>SRM Travels</h3>
+<p>Sleeper</p>
+<p>11:00 PM</p>
+<p>₹900</p>
+<button>Select Bus</button>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Select Seats</h2>
+
+<div class="seat-container">
+
+<div class="seats">
+<div class="seat">1</div>
+<div class="seat">2</div>
+<div class="seat">3</div>
+<div class="seat">4</div>
+<div class="seat">5</div>
+<div class="seat">6</div>
+<div class="seat">7</div>
+<div class="seat">8</div>
+<div class="seat">9</div>
+<div class="seat">10</div>
+<div class="seat">11</div>
+<div class="seat">12</div>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Payment</h2>
+
+<div class="payment">
+
+<input type="text" placeholder="Card Holder Name">
+<input type="text" placeholder="Card Number">
+<input type="text" placeholder="Expiry Date">
+<input type="password" placeholder="CVV">
+
+<button class="btn">Pay Now</button>
+
+</div>
+</section>
+
+<section class="section">
+<h2>E-Ticket</h2>
+
+<div class="ticket">
+
+<h3>Ticket Confirmed ✅</h3>
+
+<p><strong>Passenger:</strong> John Doe</p>
+<p><strong>Bus:</strong> Green Travels</p>
+<p><strong>Route:</strong> Chennai → Bangalore</p>
+<p><strong>Seat:</strong> 5</p>
+<p><strong>Booking ID:</strong> BUS2026001</p>
+<p><strong>Fare:</strong> ₹950</p>
+
+<br>
+
+<button class="btn">Download Ticket</button>
+
+</div>
+</section>
+
+<footer>
+<p>©️ 2026 Online Bus Ticket Booking System</p>
+</footer>
+
+</body>
+</html>
