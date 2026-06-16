@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Built-in JavaScript Objects</title>
+
+    <script>
+        function showObjects() {
+
+            var today = new Date();
+
+            var number = 25.6789;
+
+            var output = "";
+
+            output += "Date Object: " + today + "<br><br>";
+
+            output += "Math Object (Square Root of 25): "
+                   + Math.sqrt(25) + "<br><br>";
+
+            output += "Math Object (Random Number): "
+                   + Math.random() + "<br><br>";
+
+            output += "Number Object: "
+                   + number.toFixed(2) + "<br><br>";
+
+            output += "String Object: "
+                   + "WELCOME".toLowerCase();
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Built-in JavaScript Objects</h2>
+
+    <button onclick="showObjects()">Display Objects</button>
+
+    <p id="result"></p>
+
+</body>
+</html>
