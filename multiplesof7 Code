@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiples of 7</title>
+
+    <script>
+        function showMultiples() {
+            var output = "";
+
+            for (var i = 1; i <= 10; i++) {
+                output += (7 * i) + "<br>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Multiples of 7</h2>
+
+    <button onclick="showMultiples()">Display Multiples</button>
+
+    <p id="result"></p>
+
+</body>
+</html>
