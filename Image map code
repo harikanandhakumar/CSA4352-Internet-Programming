@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Mapping Example</title>
+</head>
+<body>
+
+<h2>Image Mapping Demo</h2>
+
+<img src="image.jpg" usemap="#mymap" width="600" height="400">
+
+<map name="mymap">
+
+    <!-- Left side -->
+    <area shape="rect"
+          coords="0,0,300,400"
+          href="https://www.google.com"
+          target="_blank"
+          alt="Google">
+
+    <!-- Right side -->
+    <area shape="rect"
+          coords="300,0,600,400"
+          href="https://www.youtube.com"
+          target="_blank"
+          alt="YouTube">
+
+</map>
+
+</body>
+</html>
