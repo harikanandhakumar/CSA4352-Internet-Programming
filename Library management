@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Digital Library Management System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+    color:white;
+}
+
+/* Header */
+header{
+    background:rgba(0,0,0,0.4);
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#fbbf24;
+}
+
+/* Hero Section */
+.hero{
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.hero button{
+    padding:15px 35px;
+    border:none;
+    background:#f59e0b;
+    color:white;
+    border-radius:10px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* Container */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+/* Search */
+.search-box{
+    background:white;
+    color:black;
+    padding:30px;
+    border-radius:15px;
+}
+
+.search-box input,
+.search-box select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.search-box button{
+    width:100%;
+    padding:12px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+}
+
+/* Books */
+.books{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    color:black;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+/* Dashboard */
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.box{
+    background:white;
+    color:black;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.box h2{
+    color:#2563eb;
+}
+
+/* Issue Form */
+.form-section{
+    background:white;
+    color:black;
+    padding:30px;
+    border-radius:15px;
+}
+
+.form-section input,
+.form-section select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.form-section button{
+    width:100%;
+    padding:12px;
+    background:#16a34a;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+}
+
+/* Record */
+.record{
+    background:white;
+    color:black;
+    padding:25px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:black;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">📚 Smart Library</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Books</a>
+        <a href="#">Dashboard</a>
+        <a href="#">Issue Book</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Smart Digital Library</h1>
+    <p>Manage Books, Students, E-Books and Library Activities Online</p>
+    <button>Explore Library</button>
+</section>
+
+<!-- Search Books -->
+<div class="container">
+<h2 class="section-title">🔍 Search Books</h2>
+
+<div class="search-box">
+<input type="text" placeholder="Enter Book Name">
+
+<select>
+<option>Choose Category</option>
+<option>Programming</option>
+<option>Database</option>
+<option>Networking</option>
+<option>Artificial Intelligence</option>
+</select>
+
+<button>Search Book</button>
+</div>
+</div>
+
+<!-- Dashboard -->
+<div class="container">
+<h2 class="section-title">📊 Library Dashboard</h2>
+
+<div class="dashboard">
+
+<div class="box">
+<h2>1500+</h2>
+<p>Total Books</p>
+</div>
+
+<div class="box">
+<h2>500+</h2>
+<p>Students</p>
+</div>
+
+<div class="box">
+<h2>120</h2>
+<p>Books Issued</p>
+</div>
+
+<div class="box">
+<h2>50</h2>
+<p>E-Books</p>
+</div>
+
+</div>
+</div>
+
+<!-- New Arrivals -->
+<div class="container">
+<h2 class="section-title">📖 New Arrivals</h2>
+
+<div class="books">
+
+<div class="card">
+<h3>Artificial Intelligence</h3>
+<p>Latest AI Concepts</p>
+<p>Status: Available ✅</p>
+</div>
+
+<div class="card">
+<h3>Cyber Security</h3>
+<p>Network Protection</p>
+<p>Status: Available ✅</p>
+</div>
+
+<div class="card">
+<h3>Web Development</h3>
+<p>HTML CSS JavaScript</p>
+<p>Status: Available ✅</p>
+</div>
+
+<div class="card">
+<h3>Cloud Computing</h3>
+<p>AWS & Azure</p>
+<p>Status: Available ✅</p>
+</div>
+
+</div>
+</div>
+
+<!-- Issue Book -->
+<div class="container">
+<h2 class="section-title">📚 Issue Book</h2>
+
+<div class="form-section">
+
+<input type="text" placeholder="Student Name">
+
+<input type="text" placeholder="Register Number">
+
+<select>
+<option>Select Book</option>
+<option>Artificial Intelligence</option>
+<option>Cyber Security</option>
+<option>Web Development</option>
+<option>Cloud Computing</option>
+</select>
+
+<input type="date">
+
+<input type="date">
+
+<button>Issue Book</button>
+
+</div>
+
+<div class="record">
+<h3>📄 Latest Issue Record</h3>
+<br>
+<p><strong>Student:</strong> Kamalini</p>
+<p><strong>Book:</strong> Artificial Intelligence</p>
+<p><strong>Issue Date:</strong> 09-06-2026</p>
+<p><strong>Return Date:</strong> 23-06-2026</p>
+<p><strong>Status:</strong> Issued ✅</p>
+</div>
+</div>
+
+<!-- Features -->
+<div class="container">
+<h2 class="section-title">✨ Smart Features</h2>
+
+<div class="books">
+
+<div class="card">
+<h3>📚 E-Book Library</h3>
+</div>
+
+<div class="card">
+<h3>⭐ Book Ratings</h3>
+</div>
+
+<div class="card">
+<h3>🔔 Notifications</h3>
+</div>
+
+<div class="card">
+<h3>💰 Fine Calculator</h3>
+</div>
+
+<div class="card">
+<h3>📱 QR Code Access</h3>
+</div>
+
+<div class="card">
+<h3>👨‍💼 Admin Dashboard</h3>
+</div>
+
+</div>
+</div>
+
+<footer>
+<p>©️ 2026 Smart Digital Library Management System</p>
+</footer>
+
+</body>
+</html>
